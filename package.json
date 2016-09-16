@@ -1,0 +1,31 @@
+{
+  "name": "dialog-api",
+  "version": "1.0.0",
+  "description": "A node.js client for the Dialog API.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phildionne/dialog-node.git"
+  },
+  "keywords": [
+    "analytics",
+    "api",
+    "dialog",
+    "chatbot",
+    "conversation"
+  ],
+  "author": "“Philippe Dionne <p@dialoganalytics.com”>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phildionne/dialog-node/issues"
+  },
+  "homepage": "https://github.com/phildionne/dialog-node#readme",
+  "engines": {
+    "node": ">= v0.10.0"
+  },
+  "dependencies": {
+    "uuid": ">= 0",
+    "request": ">= 0"
+  },
+}
