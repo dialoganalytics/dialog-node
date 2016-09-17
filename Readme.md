@@ -23,9 +23,9 @@ Create a framework specific API client:
 
 ```js
 // Require the right version for your framework
-var Dialog = require('dialog-api/botkit');
-var Dialog = require('dialog-api/messenger');
-var Dialog = require('dialog-api/kik');
+var Dialog = require('dialog-api/lib/botkit');
+var Dialog = require('dialog-api/lib/messenger');
+var Dialog = require('dialog-api/lib/kik');
 
 var track = new Dialog('DIALOG_API_TOKEN', 'botId')
 ```
