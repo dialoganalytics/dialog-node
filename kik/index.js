@@ -1,9 +1,9 @@
 var uuid = require("uuid");
-var Dialog = require("../dialog")
+var Dialog = require("../dialog");
 
 module.exports = function(apiToken, botId) {
   this.apiToken = apiToken;
-  this.botId    = botId;
+  this.botId = botId;
 
   incoming: function(message) {
     var payload = {
@@ -41,4 +41,4 @@ module.exports = function(apiToken, botId) {
 
     return Dialog.track(apiToken, botId, payload);
   }
-}
+};

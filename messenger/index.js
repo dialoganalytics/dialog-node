@@ -1,6 +1,6 @@
 'use strict';
 
-var Dialog = require("../dialog")
+var Dialog = require("../dialog");
 
 module.exports = function(apiToken, botId) {
   this.apiToken = apiToken;
@@ -17,4 +17,4 @@ module.exports = function(apiToken, botId) {
 
     return Dialog.track(apiToken, botId, payload);
   }
-}
+};
