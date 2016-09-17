@@ -8,7 +8,7 @@ module.exports = {
     var options = {
       url: 'https://api.dialoganalytics.com/v1/b/' + botId + '/track',
       headers: {
-        'HTTP_AUTHORIZATION': apiToken
+        'HTTP_AUTHORIZATION': 'Token token="' + apiToken + '"'
       },
       json: payload
     }
