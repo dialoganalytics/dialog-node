@@ -14,7 +14,8 @@ module.exports = {
     }
 
     function callback(error, response, body) {
-        console.log(JSON.parse(body));
+        console.log(error);
+        console.log(body);
     };
 
     return request.post(options, callback);
