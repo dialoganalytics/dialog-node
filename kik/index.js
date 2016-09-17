@@ -24,17 +24,17 @@ module.exports = function(apiToken, botId) {
     return Dialog.track(apiToken, botId, payload);
   },
 
-  this.outgoing = function(message) {
+  this.outgoing = function(object) {
     var payload = {
       message: {
-        conversation_distinct_id: message.chatId,
+        conversation_distinct_id: object.chatId,
         distinct_id: uuid.v4(),
         platform: 'kik',
         provider: 'kik',
-        mtype: message.type,
-        sent_at: new Date().getTime(),
+        mtype: object.type,
+        sent_at: new Date().getTime() / 1000,
         properties: {
-          text: message.body
+          text: object.body
         }
       }
     };
