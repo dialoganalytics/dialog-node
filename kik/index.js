@@ -10,6 +10,7 @@ module.exports = function(apiToken, botId) {
       message: {
         conversation_distinct_id: message.chatId,
         creator_distinct_id: message.from,
+        creator_type: 'Interlocutor',
         distinct_id: message.id,
         platform: 'kik',
         provider: 'kik',
@@ -28,6 +29,8 @@ module.exports = function(apiToken, botId) {
     var payload = {
       message: {
         conversation_distinct_id: object.chatId,
+        creator_distinct_id: botId,
+        creator_type: 'Bot',
         distinct_id: uuid.v4(),
         platform: 'kik',
         provider: 'kik',
