@@ -1,3 +1,3 @@
 'use strict';
 
-module.exports = require("dialog");
+module.exports = require("./lib/dialog");
