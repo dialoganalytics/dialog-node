@@ -1,5 +1,3 @@
-'use strict';
-
 var uuid = require("uuid");
 var Dialog = require("../dialog")
 
