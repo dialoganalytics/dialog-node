@@ -23,9 +23,9 @@ Create a framework specific API client:
 
 ```js
 // Require the right version for your framework
-var Dialog = require('./dialog/botkit');
-var Dialog = require('./dialog/messenger');
-var Dialog = require('./dialog/kik');
+var Dialog = require('dialog-api/botkit');
+var Dialog = require('dialog-api/messenger');
+var Dialog = require('dialog-api/kik');
 
 var track = new Dialog('DIALOG_API_TOKEN', 'botId')
 ```
@@ -33,7 +33,7 @@ var track = new Dialog('DIALOG_API_TOKEN', 'botId')
 Or keep it real:
 
 ```js
-var Dialog = require('./dialog');
+var Dialog = require('dialog-api');
 
 var payload = {}; // See https://docs.dialoganalytics.com/reference/track/
 
