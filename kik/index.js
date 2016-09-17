@@ -5,7 +5,7 @@ module.exports = function(apiToken, botId) {
   this.apiToken = apiToken;
   this.botId = botId;
 
-  incoming: function(message) {
+  this.incoming = function(message) {
     var payload = {
       message: {
         conversation_distinct_id: message.chatId,
@@ -24,7 +24,7 @@ module.exports = function(apiToken, botId) {
     return Dialog.track(apiToken, botId, payload);
   },
 
-  outgoing: function(message) {
+  this.outgoing = function(message) {
     var payload = {
       message: {
         conversation_distinct_id: message.chatId,

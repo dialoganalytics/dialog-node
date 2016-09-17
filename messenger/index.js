@@ -6,13 +6,13 @@ module.exports = function(apiToken, botId) {
   this.apiToken = apiToken;
   this.botId    = botId;
 
-  outgoing: function() {
+  this.outgoing = function() {
     // ...
 
     return Dialog.track(apiToken, botId, payload);
   },
 
-  incoming: function() {
+  this.incoming = function() {
     // ...
 
     return Dialog.track(apiToken, botId, payload);
