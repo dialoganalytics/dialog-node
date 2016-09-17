@@ -21,7 +21,7 @@ module.exports = function(apiToken, botId) {
       }
     };
 
-    Dialog.track(apiToken, botId, payload);
+    return Dialog.track(apiToken, botId, payload);
   },
 
   outgoing: function(message) {
@@ -39,6 +39,6 @@ module.exports = function(apiToken, botId) {
       }
     };
 
-    Dialog.track(apiToken, botId, payload);
+    return Dialog.track(apiToken, botId, payload);
   }
 }

@@ -9,12 +9,12 @@ module.exports = function(apiToken, botId) {
   outgoing: function() {
     // ...
 
-    Dialog.track(apiToken, botId, payload);
+    return Dialog.track(apiToken, botId, payload);
   },
 
   incoming: function() {
     // ...
 
-    Dialog.track(apiToken, botId, payload);
+    return Dialog.track(apiToken, botId, payload);
   }
 }
