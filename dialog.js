@@ -6,10 +6,7 @@ module.exports = {
 
   track: function(apiToken, botId, payload) {
     var options = {
-      url: 'https://api.dialoganalytics.com/v1/b/' + botId + '/track',
-      headers: {
-        'HTTP_AUTHORIZATION': 'Token token=' + apiToken
-      },
+      url: 'https://api.dialoganalytics.com/v1/b/' + botId + '/track?token=' + apiToken,
       json: payload
     }
 
