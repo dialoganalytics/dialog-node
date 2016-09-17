@@ -14,7 +14,7 @@ module.exports = function(apiToken, botId) {
         platform: 'kik',
         provider: 'kik',
         mtype: message.type,
-        sent_at: message.timestamp,
+        sent_at: message.timestamp / 1000,
         properties: {
           text: message.body
         }
