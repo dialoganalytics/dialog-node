@@ -23,7 +23,8 @@ Create a framework specific API client:
 
 ```js
 // Require the right version for your framework
-var Dialog = require('dialog-api/lib/botkit');
+var Dialog = require('dialog-api/lib/botkit/messenger');
+var Dialog = require('dialog-api/lib/botkit/twilioipm');
 var Dialog = require('dialog-api/lib/messenger');
 var Dialog = require('dialog-api/lib/kik');
 
