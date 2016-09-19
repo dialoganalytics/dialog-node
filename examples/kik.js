@@ -14,13 +14,13 @@ var util = require('util');
 var http = require('http');
 var Bot  = require('@kikinteractive/kik');
 
-var Dialog = require('dialog-api/lib/kik');
-var track = new Dialog('DIALOG_API_TOKEN', 'yourBotId')
+var Dialog = require('../lib/kik'); // Replace this by `require('dialog-api/lib/kik')` in your own project
+var track = new Dialog('YOUR_DIALOG_API_TOKEN', 'yourBotId')
 
 // Configure the bot
 var bot = new Bot({
   username: 'YOUR_BOT_USERNAME',
-  apiKey: 'KIK_API_TOKEN',
+  apiKey: 'YOUR_KIK_API_KEY',
   baseUrl: 'https://example.com'
 });
 
