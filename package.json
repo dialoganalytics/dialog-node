@@ -29,6 +29,7 @@
     "request": ">= 0"
   },
   "devDependencies": {
+    "botkit": ">= v0.2",
     "@kikinteractive/kik": ">= v2.0"
   }
 }
