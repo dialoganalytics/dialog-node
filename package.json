@@ -27,5 +27,8 @@
   "dependencies": {
     "uuid": ">= 0",
     "request": ">= 0"
+  },
+  "devDependencies": {
+    "@kikinteractive/kik": ">= v2.0"
   }
 }
