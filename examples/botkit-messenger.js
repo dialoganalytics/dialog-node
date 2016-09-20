@@ -12,7 +12,7 @@
 var Botkit = require('botkit');
 
 var Dialog = require('../lib/botkit/messenger'); // Replace this by `require('dialog-api/lib/botkit/messenger')` in your own project
-var track = new Dialog(process.env.DIALOG_API_TOKEN, process.env.DIALOG_BOT_ID);
+var dialog = new Dialog(process.env.DIALOG_API_TOKEN, process.env.DIALOG_BOT_ID);
 
 var controller = Botkit.facebookbot({
   access_token: process.env.FACEBOOK_PAGE_ACCESS_TOKEN,
@@ -20,8 +20,8 @@ var controller = Botkit.facebookbot({
 });
 
 // Track incoming and outgoing messages
-controller.middleware.receive.use(track.incomingMiddleware);
-controller.middleware.send.use(track.outgoingMiddleware);
+controller.middleware.receive.use(dialog.incomingMiddleware);
+controller.middleware.send.use(dialog.outgoingMiddleware);
 
 var bot = controller.spawn({});
 

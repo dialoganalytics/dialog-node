@@ -15,7 +15,7 @@ var http = require('http');
 var Bot  = require('@kikinteractive/kik');
 
 var Dialog = require('../lib/kik'); // Replace this by `require('dialog-api/lib/kik')` in your own project
-var track = new Dialog('YOUR_DIALOG_API_TOKEN', 'yourBotId')
+var dialog = new Dialog(process.env.DIALOG_API_TOKEN, process.env.DIALOG_BOT_ID);
 
 // Configure the bot
 var bot = new Bot({
@@ -27,7 +27,7 @@ var bot = new Bot({
 bot.updateBotConfiguration();
 
 bot.onTextMessage((message) => {
-  track.incoming(message); // Track an incoming message
+  dialog.incoming(message); // Track an incoming message
 
   var replies = ["Hey, ho!", "Let's go!"];
   var response = bot.send(replies, message.from, message.chatId);
@@ -40,7 +40,7 @@ bot.onTextMessage((message) => {
         chatId: message.chatId
       };
 
-      track.outgoing(payload); // Track outgoing message(s)
+      dialog.outgoing(payload); // Track outgoing message(s)
     });
   });
 });

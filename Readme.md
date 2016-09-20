@@ -28,7 +28,7 @@ var Dialog = require('dialog-api/lib/botkit/twilioipm');
 var Dialog = require('dialog-api/lib/messenger');
 var Dialog = require('dialog-api/lib/kik');
 
-var track = new Dialog('DIALOG_API_TOKEN', 'botId')
+var dialog = new Dialog('DIALOG_API_TOKEN', 'botId')
 ```
 
 Or keep it real:
