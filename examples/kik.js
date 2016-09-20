@@ -19,8 +19,8 @@ var dialog = new Dialog(process.env.DIALOG_API_TOKEN, process.env.DIALOG_BOT_ID)
 
 // Configure the bot
 var bot = new Bot({
-  username: 'YOUR_BOT_USERNAME',
-  apiKey: 'YOUR_KIK_API_KEY',
+  username: process.env.KIK_BOT_USERNAME,
+  apiKey: process.env.KIK_API_KEY,
   baseUrl: 'https://example.com'
 });
 
