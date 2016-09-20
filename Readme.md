@@ -92,3 +92,16 @@ response.then(function() {
 
 // ...
 ```
+
+### Tracking clicks
+
+Track links (or anything with a URL) clicked by users inside a conversation.
+
+```js
+var link = {
+  "type": "web_url",
+  "url": Dialog.link('botId', 'http://example.com'), // https://api.dialoganalytics.com/v1/click/botId?url=http://example.com
+  "title": "View Item"
+}
+```
+
