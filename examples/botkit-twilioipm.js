@@ -30,7 +30,7 @@ var bot = controller.spawn({
 });
 
 
-controller.setupWebserver(3000, function(err, webserver) {
+controller.setupWebserver(process.env.PORT || 3000, function(err, webserver) {
   controller.createWebhookEndpoints(controller.webserver, bot, function() {
     console.log('This bot is online!!!');
   });
