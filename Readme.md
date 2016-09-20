@@ -40,3 +40,55 @@ var payload = {}; // See https://docs.dialoganalytics.com/reference/track/
 
 Dialog.track('DIALOG_API_TOKEN', 'botId', payload);
 ```
+
+### Tracking messages
+
+#### Messenger with Botkit
+
+[Example Messenger bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-messenger.js)
+
+```js
+controller.middleware.receive.use(dialog.incomingMiddleware);
+controller.middleware.send.use(dialog.outgoingMiddleware);
+```
+
+#### Twilio IP Messaging with Botkit
+
+[Example Twilio IP messaging bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-twilioipm.js)
+
+```js
+controller.middleware.receive.use(dialog.incomingMiddleware);
+controller.middleware.send.use(dialog.outgoingMiddleware);
+```
+
+#### Messenger
+
+Coming soon
+
+#### Kik
+
+[Example Kik bot](https://github.com/dialoganalytics/dialog-node/blob/master/examples/kik.js)
+
+```js
+// ...
+bot.onTextMessage((message) => {
+  dialog.incoming(message);
+  // ...
+});
+
+// ...
+
+response.then(function() {
+  replies.forEach((text) => {
+    payload = {
+      type: 'text',
+      body: text,
+      chatId: message.chatId
+    };
+
+    dialog.outgoing(payload);
+  });
+});
+
+// ...
+```
