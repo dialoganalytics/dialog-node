@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "description": "A node.js client for the Dialog API.",
   "main": "index.js",
-  "scripts": {},
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/phildionne/dialog-node.git"
@@ -30,6 +36,8 @@
   },
   "devDependencies": {
     "botkit": ">= v0.2",
-    "@kikinteractive/kik": ">= v2.0"
+    "@kikinteractive/kik": ">= v2.0",
+    "chai": ">= 3.5.0",
+    "mocha": ">= 2.4.5"
   }
 }
