@@ -108,3 +108,50 @@ var link = {
 }
 ```
 
+### Messages
+
+Retrieve a message. See [docs.dialoganalytics.com/reference/message#list](https://docs.dialoganalytics.com/reference/message#list)
+
+```js
+dialog.retrieveMessage(conversationId, messageId);
+```
+
+List all messages in a conversation. See [docs.dialoganalytics.com/reference/message#retrieve](https://docs.dialoganalytics.com/reference/message#retrieve)
+
+```js
+dialog.listMessages(conversationId);
+```
+
+### Conversations
+
+Retrieve a conversation. See [docs.dialoganalytics.com/reference/conversation#list](https://docs.dialoganalytics.com/reference/conversation#list)
+
+```js
+dialog.retrieveConversation(conversationId);
+```
+
+List all conversations. See [docs.dialoganalytics.com/reference/conversation#retrieve](https://docs.dialoganalytics.com/reference/conversation#retrieve)
+
+```js
+dialog.listConversations();
+```
+
+### Interlocutors
+
+Retrieve an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#list](https://docs.dialoganalytics.com/reference/interlocutor#list)
+
+```js
+dialog.retrieveInterlocutor(interlocutorId);
+```
+
+List all interlocutors. See [docs.dialoganalytics.com/reference/interlocutor#retrieve](https://docs.dialoganalytics.com/reference/interlocutor#retrieve)
+
+```js
+dialog.listInterlocutors();
+```
+
+Create an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#create](https://docs.dialoganalytics.com/reference/interlocutor#create)
+
+```js
+dialog.createInterlocutor(params);
+```
