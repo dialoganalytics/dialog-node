@@ -3,6 +3,7 @@
 A node.js client for the [Dialog](https://dialoganalytics.com) API.
 
 [![Dependency Status](https://gemnasium.com/badges/github.com/dialoganalytics/dialog-node.svg)](https://gemnasium.com/github.com/dialoganalytics/dialog-node)
+[![NPM Version](http://img.shields.io/npm/v/dialog-api.svg)](https://www.npmjs.org/package/dialog-api)
 
 
 ## Documentation
