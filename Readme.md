@@ -12,7 +12,7 @@ See the [API docs](https://docs.dialoganalytics.com).
 
 ## Installation
 
-Install using [npm](https://www.npmjs.com/).
+Install using [npm](https://www.npmjs.com/package/dialog-api).
 
 ```bash
 npm install dialog-api@1.x --save
