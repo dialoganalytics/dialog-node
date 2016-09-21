@@ -103,7 +103,7 @@ Track links (or anything with a URL) clicked by users inside a conversation.
 ```js
 var link = {
   "type": "web_url",
-  "url": dialog.link('http://example.com'), // https://api.dialoganalytics.com/v1/click/botId?url=http://example.com
+  "url": dialog.link('http://example.com'), // https://api.dialoganalytics.com/v1/click/botId?url=http%3A%2F%2Fexample.com
   "title": "View Item"
 }
 ```
