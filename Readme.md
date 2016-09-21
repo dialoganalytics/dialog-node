@@ -22,26 +22,29 @@ npm install dialog-api@1.x --save
 Create a framework specific API client:
 
 ```js
-// Require the right version for your framework
+// Framework specific
 var Dialog = require('dialog-api/lib/botkit/messenger');
 var Dialog = require('dialog-api/lib/botkit/twilioipm');
 var Dialog = require('dialog-api/lib/messenger'); // coming soon
 var Dialog = require('dialog-api/lib/kik');
 
-var dialog = new Dialog('DIALOG_API_TOKEN', 'botId')
-```
-
-Or keep it real:
-
-```js
+// Generic
 var Dialog = require('dialog-api');
 
-var payload = {}; // See https://docs.dialoganalytics.com/reference/track/
-
-Dialog.track('DIALOG_API_TOKEN', 'botId', payload);
+var dialog = new Dialog('DIALOG_API_TOKEN', 'botId');
 ```
 
 ### Tracking messages
+
+#### Generic
+
+See [docs.dialoganalytics.com/reference/track](https://docs.dialoganalytics.com/reference/track/)
+
+```js
+var payload = {};
+
+dialog.track(payload)
+```
 
 #### Messenger with Botkit
 
@@ -100,7 +103,7 @@ Track links (or anything with a URL) clicked by users inside a conversation.
 ```js
 var link = {
   "type": "web_url",
-  "url": Dialog.link('botId', 'http://example.com'), // https://api.dialoganalytics.com/v1/click/botId?url=http://example.com
+  "url": dialog.link('http://example.com'), // https://api.dialoganalytics.com/v1/click/botId?url=http://example.com
   "title": "View Item"
 }
 ```
