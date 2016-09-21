@@ -48,7 +48,7 @@ dialog.track(payload)
 
 #### Messenger with Botkit
 
-[Example Messenger bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-messenger.js)
+Example [Messenger bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-messenger.js)
 
 ```js
 controller.middleware.receive.use(dialog.incomingMiddleware);
@@ -57,7 +57,7 @@ controller.middleware.send.use(dialog.outgoingMiddleware);
 
 #### Twilio IP Messaging with Botkit
 
-[Example Twilio IP messaging bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-twilioipm.js)
+Example [Twilio IP messaging bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-twilioipm.js)
 
 ```js
 controller.middleware.receive.use(dialog.incomingMiddleware);
@@ -68,9 +68,9 @@ controller.middleware.send.use(dialog.outgoingMiddleware);
 
 Coming soon
 
-#### Kik
+#### Kik with @kikinteractive/kik
 
-[Example Kik bot](https://github.com/dialoganalytics/dialog-node/blob/master/examples/kik.js)
+Example [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/dialog-node/blob/master/examples/kik.js)
 
 ```js
 // ...
