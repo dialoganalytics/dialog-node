@@ -110,13 +110,13 @@ var link = {
 
 ### Messages
 
-Retrieve a message. See [docs.dialoganalytics.com/reference/message#list](https://docs.dialoganalytics.com/reference/message#list)
+Retrieve a message. See [docs.dialoganalytics.com/reference/message#retrieve](https://docs.dialoganalytics.com/reference/message#retrieve)
 
 ```js
 dialog.retrieveMessage(conversationId, messageId);
 ```
 
-List all messages in a conversation. See [docs.dialoganalytics.com/reference/message#retrieve](https://docs.dialoganalytics.com/reference/message#retrieve)
+List all messages in a conversation. See [docs.dialoganalytics.com/reference/message#list](https://docs.dialoganalytics.com/reference/message#list)
 
 ```js
 dialog.listMessages(conversationId);
@@ -124,13 +124,13 @@ dialog.listMessages(conversationId);
 
 ### Conversations
 
-Retrieve a conversation. See [docs.dialoganalytics.com/reference/conversation#list](https://docs.dialoganalytics.com/reference/conversation#list)
+Retrieve a conversation. See [docs.dialoganalytics.com/reference/conversation#retrieve](https://docs.dialoganalytics.com/reference/conversation#retrieve)
 
 ```js
 dialog.retrieveConversation(conversationId);
 ```
 
-List all conversations. See [docs.dialoganalytics.com/reference/conversation#retrieve](https://docs.dialoganalytics.com/reference/conversation#retrieve)
+List all conversations. See [docs.dialoganalytics.com/reference/conversation#list](https://docs.dialoganalytics.com/reference/conversation#list)
 
 ```js
 dialog.listConversations();
@@ -138,13 +138,13 @@ dialog.listConversations();
 
 ### Interlocutors
 
-Retrieve an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#list](https://docs.dialoganalytics.com/reference/interlocutor#list)
+Retrieve an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#retrieve](https://docs.dialoganalytics.com/reference/interlocutor#retrieve)
 
 ```js
 dialog.retrieveInterlocutor(interlocutorId);
 ```
 
-List all interlocutors. See [docs.dialoganalytics.com/reference/interlocutor#retrieve](https://docs.dialoganalytics.com/reference/interlocutor#retrieve)
+List all interlocutors. See [docs.dialoganalytics.com/reference/interlocutor#list](https://docs.dialoganalytics.com/reference/interlocutor#list)
 
 ```js
 dialog.listInterlocutors();
