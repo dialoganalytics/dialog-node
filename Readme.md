@@ -106,7 +106,7 @@ response.then(function() {
 
 ### Tracking clicks
 
-Track links (or anything with a URL) clicked by users inside a conversation.
+Track links (or anything with a URL) clicked by users inside a conversation. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
 
 ```js
 var link = {
