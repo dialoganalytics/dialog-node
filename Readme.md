@@ -5,10 +5,17 @@ A node.js client for the [Dialog](https://dialoganalytics.com) API.
 [![Dependency Status](https://gemnasium.com/badges/github.com/dialoganalytics/dialog-node.svg)](https://gemnasium.com/github.com/dialoganalytics/dialog-node)
 [![NPM Version](http://img.shields.io/npm/v/dialog-api.svg)](https://www.npmjs.org/package/dialog-api)
 
-
 ## Documentation
 
 See the [API docs](https://docs.dialoganalytics.com).
+
+## Examples
+
+- [Facebook Messenger with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
+- [Twilio IP Messaging with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
+- Twilio SMS (soon)
+- Messenger (soon)
+- [Kik](https://github.com/dialoganalytics/kik-node-example)
 
 ## Installation
 
