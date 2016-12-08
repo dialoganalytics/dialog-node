@@ -11,10 +11,12 @@ See the [API docs](https://docs.dialoganalytics.com).
 
 ## Examples
 
+- Amazon Alexa (soon)
+- Google Actions (soon)
 - [Facebook Messenger with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
-- [Twilio IP Messaging with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
+- [Twilio Programmable Chat with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
 - Twilio SMS (soon)
-- Messenger (soon)
+- Facebook Messenger (soon)
 - [Kik](https://github.com/dialoganalytics/kik-node-example)
 
 ## Installation
