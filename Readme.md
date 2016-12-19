@@ -58,16 +58,16 @@ dialog.track(payload)
 
 #### Messenger with Botkit
 
-Example [Messenger bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-messenger.js)
+Example [Messenger bot built with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
 
 ```js
 controller.middleware.receive.use(dialog.incomingMiddleware);
 controller.middleware.send.use(dialog.outgoingMiddleware);
 ```
 
-#### Twilio IP Messaging with Botkit
+#### Twilio Programmable Chat (IP Messaging) with Botkit
 
-Example [Twilio IP messaging bot built with Botkit](https://github.com/dialoganalytics/dialog-node/blob/master/examples/botkit-twilioipm.js)
+Example [Twilio Programmable Chat bot built with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
 
 ```js
 controller.middleware.receive.use(dialog.incomingMiddleware);
@@ -80,30 +80,17 @@ Coming soon
 
 #### Kik with @kikinteractive/kik
 
-Example [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/dialog-node/blob/master/examples/kik.js)
+Example [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/kik-node-example)
 
 ```js
 // ...
-bot.onTextMessage((message) => {
-  dialog.incoming(message);
-  // ...
+bot.use(function(message, next) {
+  dialog.incomingMiddleware(message, next);
 });
 
-// ...
-
-response.then(function() {
-  replies.forEach((text) => {
-    payload = {
-      type: 'text',
-      body: text,
-      chatId: message.chatId
-    };
-
-    dialog.outgoing(payload);
-  });
+bot.outgoing(function(message, next) {
+  dialog.outgoingMiddleware(message, next);
 });
-
-// ...
 ```
 
 ### Tracking clicks
