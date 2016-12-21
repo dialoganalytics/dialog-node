@@ -51,7 +51,25 @@ var dialog = new Dialog(request.env('DIALOG_API_TOKEN'), 'botId');
 See [docs.dialoganalytics.com/reference/track](https://docs.dialoganalytics.com/reference/track/)
 
 ```js
-var payload = {};
+var payload = {
+  message: {
+    distinct_id: "81694d37-8f69-422e-80a6-7d5df749ef6a",
+    platform: "messenger",
+    provider: "messenger",
+    mtype: "text",
+    sent_at: 1482332833.034,
+    properties: {
+      text: "Hello world"
+    }
+  },
+  conversation: {
+    distinct_id: "48548268-2b08-4db4-9ade-2feb535227db"
+  },
+  creator: {
+    distinct_id: "960e4275-bb4d-473b-a21d-cadb3701bf3f",
+    type: "interlocutor"
+  }
+};
 
 dialog.track(payload)
 ```
