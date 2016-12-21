@@ -37,7 +37,7 @@ var Dialog = require('dialog-api/lib/kik');
 // Generic
 var Dialog = require('dialog-api');
 
-var dialog = new Dialog(request.env('DIALOG_API_TOKEN'), 'botId');
+var dialog = new Dialog(request.env('DIALOG_API_TOKEN'), request.env('DIALOG_BOT_ID'));
 ```
 
 ### Tracking messages
