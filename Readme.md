@@ -25,7 +25,7 @@ npm install dialog-api --save
 
 ## Usage
 
-Create a framework specific API client:
+This library needs to be configured with your API token which is available in your [personal account](http://app.dialoganalytics.com/users/edit), and a bot ID.
 
 ```js
 // Framework specific
