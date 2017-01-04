@@ -14,6 +14,7 @@ A node.js client for the [Dialog](https://dialoganalytics.com) API.
 - Twilio SMS (soon)
 - Facebook Messenger (soon)
 - [Kik](https://github.com/dialoganalytics/kik-node-example)
+- [Botpress](https://github.com/dialoganalytics/botpress-example)
 
 ## Installation
 
