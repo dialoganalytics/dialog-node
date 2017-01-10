@@ -31,12 +31,10 @@
     "node": ">= v0.10.0"
   },
   "dependencies": {
-    "uuid": ">= 0",
-    "request": ">= 0"
+    "request": ">= 0",
+    "uuid": ">= 0"
   },
   "devDependencies": {
-    "botkit": ">= v0.2",
-    "@kikinteractive/kik": ">= v2.0",
     "chai": ">= 3.5.0",
     "mocha": ">= 2.4.5"
   }
