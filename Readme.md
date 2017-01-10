@@ -29,15 +29,7 @@ npm install dialog-api --save
 This library needs to be configured with your API token which is available in your [personal account](http://app.dialoganalytics.com/users/edit), and a bot ID.
 
 ```js
-// Framework specific
-var Dialog = require('dialog-api/lib/botkit/messenger');
-var Dialog = require('dialog-api/lib/botkit/twilioipm');
-var Dialog = require('dialog-api/lib/messenger'); // coming soon
-var Dialog = require('dialog-api/lib/kik');
-
-// Generic
 var Dialog = require('dialog-api');
-
 var dialog = new Dialog(request.env('DIALOG_API_TOKEN'), request.env('DIALOG_BOT_ID'));
 ```
 
@@ -76,6 +68,8 @@ dialog.track(payload)
 Example [Messenger bot built with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
 
 ```js
+var Dialog = require('dialog-api/lib/botkit/messenger');
+
 controller.middleware.receive.use(dialog.incomingMiddleware);
 controller.middleware.send.use(dialog.outgoingMiddleware);
 ```
@@ -85,6 +79,8 @@ controller.middleware.send.use(dialog.outgoingMiddleware);
 Example [Twilio Programmable Chat bot built with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
 
 ```js
+var Dialog = require('dialog-api/lib/botkit/twilioipm');
+
 controller.middleware.receive.use(dialog.incomingMiddleware);
 controller.middleware.send.use(dialog.outgoingMiddleware);
 ```
@@ -98,6 +94,8 @@ Coming soon
 Example [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/kik-node-example)
 
 ```js
+var Dialog = require('dialog-api/lib/kik');
+
 // ...
 bot.use(function(message, next) {
   dialog.incomingMiddleware(message, next);
