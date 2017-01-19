@@ -11,10 +11,10 @@ A node.js client for the [Dialog](https://dialoganalytics.com) API.
 - Google Actions (soon)
 - [Facebook Messenger with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
 - [Twilio Programmable Chat with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
-- Twilio SMS (soon)
-- Facebook Messenger (soon)
+- [Facebook Messenger with Express](https://github.com/dialoganalytics/messenger-node-example)
 - [Kik](https://github.com/dialoganalytics/kik-node-example)
 - [Botpress](https://github.com/dialoganalytics/botpress-example)
+- Twilio SMS (soon)
 
 ## Installation
 
@@ -85,9 +85,44 @@ controller.middleware.receive.use(dialog.incomingMiddleware);
 controller.middleware.send.use(dialog.outgoingMiddleware);
 ```
 
-#### Messenger
+#### Facebook Messenger with expressjs/express
 
-Coming soon
+Example [Messenger bot built with expressjs/express](https://github.com/dialoganalytics/messenger-node-example)
+
+```js
+var Dialog = require('dialog-api/lib/messenger');
+
+var app = express();
+
+// ...
+app.post('/webhook', function(req, res) {
+  dialog.incoming(req.body);
+
+  var messagingEvents = req.body.entry[0].messaging;
+
+  if (messagingEvents.length && messagingEvents[0].message) {
+    var event = req.body.entry[0].messaging[0];
+
+    var payload = {
+      recipient: {
+        id: event.sender.id
+      },
+      message: { text: 'Hey human!' }
+    };
+
+    var options = {
+      url: 'https://graph.facebook.com/v2.6/me/messages',
+      qs: { access_token: process.env.FACEBOOK_PAGE_ACCESS_TOKEN },
+      method: 'POST',
+      json: payload
+    };
+
+    request(options, function(error, response, body) {
+      dialog.outgoing(payload, body);
+    });
+  }
+})
+```
 
 #### Kik with @kikinteractive/kik
 
