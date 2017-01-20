@@ -42,25 +42,31 @@ See [docs.dialoganalytics.com/reference/track](https://docs.dialoganalytics.com/
 ```js
 var payload = {
   message: {
-    distinct_id: "81694d37-8f69-422e-80a6-7d5df749ef6a",
+    distinct_id: "155e681f-ef72-4f01-9b85-12a6f7d298be",
     platform: "messenger",
-    provider: "messenger",
+    provider: "dialog-node",
     mtype: "text",
-    sent_at: 1482332833.034,
+    sent_at: 1484948110.458,
     properties: {
       text: "Hello world"
     }
   },
   conversation: {
-    distinct_id: "48548268-2b08-4db4-9ade-2feb535227db"
+    distinct_id: "0a4b6c44-55e0-4381-a678-34f02b2620d7"
   },
   creator: {
-    distinct_id: "960e4275-bb4d-473b-a21d-cadb3701bf3f",
-    type: "interlocutor"
+    distinct_id: "d5ae3f5f-1645-40c3-a38a-02382cd0ee49",
+    type: "interlocutor",
+    first_name: "Elon",
+    last_name: "Musk",
+    gender: "male",
+    locale: "US",
+    profile_picture: "http://spacex.com/elon.jpg",
+    timezone: "America/Los_Angeles"
   }
 };
 
-dialog.track(payload)
+dialog.track(payload);
 ```
 
 #### Botpress
