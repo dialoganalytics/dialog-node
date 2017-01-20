@@ -9,12 +9,12 @@ A node.js client for the [Dialog](https://dialoganalytics.com) API.
 
 - Amazon Alexa (soon)
 - Google Actions (soon)
-- [Facebook Messenger with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
+- Twilio SMS (soon)
+- [Botpress](https://github.com/dialoganalytics/botpress-example)
 - [Twilio Programmable Chat with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
+- [Facebook Messenger with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
 - [Facebook Messenger with Express](https://github.com/dialoganalytics/messenger-node-example)
 - [Kik](https://github.com/dialoganalytics/kik-node-example)
-- [Botpress](https://github.com/dialoganalytics/botpress-example)
-- Twilio SMS (soon)
 
 ## Installation
 
@@ -63,9 +63,25 @@ var payload = {
 dialog.track(payload)
 ```
 
+#### Botpress
+
+Example: [Botpress bot with botpress-dialog](https://github.com/dialoganalytics/botpress-example)
+
+See [botpress-dialog](https://github.com/dialoganalytics/botpress-dialog)
+
+#### Twilio Programmable Chat (IP Messaging) with Botkit
+
+Example: [Twilio Programmable Chat bot built with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
+
+```js
+var Dialog = require('dialog-api/lib/botkit/twilioipm');
+
+controller.middleware.receive.use(dialog.incomingMiddleware);
+controller.middleware.send.use(dialog.outgoingMiddleware);
+```
 #### Messenger with Botkit
 
-Example [Messenger bot built with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
+Example: [Messenger bot built with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
 
 ```js
 var Dialog = require('dialog-api/lib/botkit/messenger');
@@ -74,20 +90,9 @@ controller.middleware.receive.use(dialog.incomingMiddleware);
 controller.middleware.send.use(dialog.outgoingMiddleware);
 ```
 
-#### Twilio Programmable Chat (IP Messaging) with Botkit
-
-Example [Twilio Programmable Chat bot built with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
-
-```js
-var Dialog = require('dialog-api/lib/botkit/twilioipm');
-
-controller.middleware.receive.use(dialog.incomingMiddleware);
-controller.middleware.send.use(dialog.outgoingMiddleware);
-```
-
 #### Facebook Messenger with expressjs/express
 
-Example [Messenger bot built with expressjs/express](https://github.com/dialoganalytics/messenger-node-example)
+Example: [Messenger bot built with expressjs/express](https://github.com/dialoganalytics/messenger-node-example)
 
 ```js
 var Dialog = require('dialog-api/lib/messenger');
@@ -126,7 +131,7 @@ app.post('/webhook', function(req, res) {
 
 #### Kik with @kikinteractive/kik
 
-Example [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/kik-node-example)
+Example: [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/kik-node-example)
 
 ```js
 var Dialog = require('dialog-api/lib/kik');
