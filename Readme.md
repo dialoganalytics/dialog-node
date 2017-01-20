@@ -7,7 +7,7 @@ A node.js client for the [Dialog](https://dialoganalytics.com) API.
 
 ## Examples
 
-- Amazon Alexa (soon)
+- [Amazon Alexa](https://github.com/dialoganalytics/alexa-node-example)
 - Google Actions (soon)
 - [Facebook Messenger with Botkit](https://github.com/dialoganalytics/botkit-messenger-example)
 - [Twilio Programmable Chat with Botkit](https://github.com/dialoganalytics/botkit-twilio-ipm-example)
