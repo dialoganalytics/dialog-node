@@ -36,7 +36,8 @@
     "lodash.merge": "^4.6.0",
     "lodash.pick": "^4.4.0",
     "request": ">= 0",
-    "uuid": ">= 0"
+    "uuid": ">= 0",
+    "winston": "^2.3.1"
   },
   "devDependencies": {
     "chai": ">= 3.5.0",
