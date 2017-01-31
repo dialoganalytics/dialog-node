@@ -42,7 +42,6 @@ See [docs.dialoganalytics.com/reference/track](https://docs.dialoganalytics.com/
 ```js
 var payload = {
   message: {
-    distinct_id: "155e681f-ef72-4f01-9b85-12a6f7d298be",
     platform: "messenger",
     provider: "dialog-node",
     mtype: "text",
