@@ -151,6 +151,14 @@ bot.outgoing(function(message, next) {
 });
 ```
 
+### Events
+
+Send events to Dialog to keep track of your custom logic. Optionally pass an `interlocutorId` to tie the event to one of your bot's interlocutors.  See [docs.dialoganalytics.com/reference/event#create](https://docs.dialoganalytics.com/reference/event#create)
+
+```js
+dialog.event('subscribed', new Date().getTime() / 1000, 'interlocutorId', { custom: 'value' })
+```
+
 ### Tracking clicks
 
 Track links (or anything with a URL) clicked by users inside a conversation. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
