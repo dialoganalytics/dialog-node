@@ -46,6 +46,14 @@ var payload = {
     provider: "dialog-node",
     mtype: "text",
     sent_at: 1484948110.458,
+    nlp: {
+      intents: [
+        {
+          name: 'order.create',
+          confidence: 0.98
+        }
+      ]
+    },
     properties: {
       text: "Hello world"
     }
