@@ -172,14 +172,11 @@ dialog.event('subscribed', new Date().getTime() / 1000, 'interlocutorId', { cust
 
 ### Tracking clicks
 
-Track links (or anything with a URL) clicked by users inside a conversation. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
+Track links clicked by interlocutors inside a conversation. Pass the interlocutor's distinct Id (provided by the platform or provider) and the `url`. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
 
 ```js
-var link = {
-  "type": "web_url",
-  "url": dialog.link('http://example.com'), // https://api.dialoganalytics.com/v1/click/botId?url=http%3A%2F%2Fexample.com
-  "title": "View Item"
-}
+dialog.link('http://example.com', user.id)
+// https://api.dialoganalytics.com/v1/b/7928374/clicks/?id=123456&url=http%3A%2F%2Fexample.com
 ```
 
 ### Messages
