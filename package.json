@@ -1,6 +1,6 @@
 {
   "name": "dialog-api",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "A node.js client for the Dialog API.",
   "main": "index.js",
   "directories": {
