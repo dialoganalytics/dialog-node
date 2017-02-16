@@ -150,24 +150,24 @@ app.post('/webhook', function(req, res) {
 Example: [Kik bot built with @kikinteractive/kik](https://github.com/dialoganalytics/kik-node-example)
 
 ```js
-var Dialog = require('dialog-api/lib/kik');
+var Dialog = require('dialog-api/lib/kik')
 
 // ...
 bot.use(function(message, next) {
-  dialog.incomingMiddleware(message, next);
-});
+  dialog.incomingMiddleware(message, next)
+})
 
 bot.outgoing(function(message, next) {
-  dialog.outgoingMiddleware(message, next);
-});
+  dialog.outgoingMiddleware(message, next)
+})
 ```
 
 ### Events
 
-Send events to Dialog to keep track of your custom logic. Optionally pass an `interlocutorId` to tie the event to one of your bot's interlocutors.  See [docs.dialoganalytics.com/reference/event#create](https://docs.dialoganalytics.com/reference/event#create)
+Send events to Dialog to keep track of your custom logic. Optionally pass an Interlocutor's distinct id to tie the event to one of your bot's interlocutors. See [docs.dialoganalytics.com/reference/event#create](https://docs.dialoganalytics.com/reference/event#create)
 
 ```js
-dialog.event('subscribed', new Date().getTime() / 1000, 'interlocutorId', { custom: 'value' })
+dialog.event('subscribed', new Date().getTime() / 1000, 'interlocutorDistinctId', { custom: 'value' })
 ```
 
 ### Tracking clicks
@@ -175,64 +175,74 @@ dialog.event('subscribed', new Date().getTime() / 1000, 'interlocutorId', { cust
 Track links clicked by interlocutors inside a conversation. Pass the interlocutor's distinct Id (provided by the platform or provider) and the `url`. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
 
 ```js
-dialog.link('http://example.com', user.id)
+dialog.link('http://example.com', interlocutorDistinctId)
 // https://api.dialoganalytics.com/v1/b/7928374/clicks/?id=123456&url=http%3A%2F%2Fexample.com
 ```
 
 ### Messages
 
-Retrieve a message. See [docs.dialoganalytics.com/reference/message#retrieve](https://docs.dialoganalytics.com/reference/message#retrieve)
+#### Retrieve a message
+
+See [docs.dialoganalytics.com/reference/message#retrieve](https://docs.dialoganalytics.com/reference/message#retrieve)
 
 ```js
-dialog.retrieveMessage(conversationId, messageId);
+dialog.retrieveMessage(conversationId, messageId)
 ```
+
+#### List all messages
 
 List all messages in a conversation. See [docs.dialoganalytics.com/reference/message#list](https://docs.dialoganalytics.com/reference/message#list)
 
 ```js
-dialog.listMessages(conversationId);
+dialog.listMessages(conversationId)
 ```
 
 ### Conversations
 
-Retrieve a conversation. See [docs.dialoganalytics.com/reference/conversation#retrieve](https://docs.dialoganalytics.com/reference/conversation#retrieve)
+#### Retrieve a conversation
+
+See [docs.dialoganalytics.com/reference/conversation#retrieve](https://docs.dialoganalytics.com/reference/conversation#retrieve)
 
 ```js
-dialog.retrieveConversation(conversationId);
+dialog.retrieveConversation(conversationId)
 ```
 
-List all conversations. See [docs.dialoganalytics.com/reference/conversation#list](https://docs.dialoganalytics.com/reference/conversation#list)
+#### List all conversations
+
+See [docs.dialoganalytics.com/reference/conversation#list](https://docs.dialoganalytics.com/reference/conversation#list)
 
 ```js
-dialog.listConversations();
+dialog.listConversations()
 ```
 
 ### Interlocutors
 
-Retrieve an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#retrieve](https://docs.dialoganalytics.com/reference/interlocutor#retrieve)
+#### List all interlocutors
+
+See [docs.dialoganalytics.com/reference/interlocutor#list](https://docs.dialoganalytics.com/reference/interlocutor#list)
 
 ```js
-dialog.retrieveInterlocutor(interlocutorId);
+dialog.listInterlocutors()
 ```
 
-List all interlocutors. See [docs.dialoganalytics.com/reference/interlocutor#list](https://docs.dialoganalytics.com/reference/interlocutor#list)
+#### Retrieve an interlocutor
+
+See [docs.dialoganalytics.com/reference/interlocutor#retrieve](https://docs.dialoganalytics.com/reference/interlocutor#retrieve)
 
 ```js
-dialog.listInterlocutors();
+dialog.retrieveInterlocutor(interlocutorId)
 ```
 
-Create an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#create](https://docs.dialoganalytics.com/reference/interlocutor#create)
+#### Update an interlocutor
+
+See [docs.dialoganalytics.com/reference/interlocutor#update](https://docs.dialoganalytics.com/reference/interlocutor#update)
 
 ```js
-dialog.createInterlocutor(params);
+dialog.updateInterlocutor(interlocutorId, params)
 ```
 
-Update an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#update](https://docs.dialoganalytics.com/reference/interlocutor#update)
 #### Creating an interlocutor
 
-```js
-dialog.updateInterlocutor(distinctId, params);
-```
 To create an interlocutor, use the `track` endpoint. An interlocutor must initially be created in association with a conversation. See [docs.dialoganalytics.com/reference/track](https://docs.dialoganalytics.com/reference/track/)
 
 ## Documentation
