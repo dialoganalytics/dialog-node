@@ -228,10 +228,12 @@ dialog.createInterlocutor(params);
 ```
 
 Update an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#update](https://docs.dialoganalytics.com/reference/interlocutor#update)
+#### Creating an interlocutor
 
 ```js
 dialog.updateInterlocutor(distinctId, params);
 ```
+To create an interlocutor, use the `track` endpoint. An interlocutor must initially be created in association with a conversation. See [docs.dialoganalytics.com/reference/track](https://docs.dialoganalytics.com/reference/track/)
 
 ## Documentation
 
