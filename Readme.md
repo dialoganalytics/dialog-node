@@ -227,6 +227,12 @@ Create an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#cre
 dialog.createInterlocutor(params);
 ```
 
+Update an interlocutor. See [docs.dialoganalytics.com/reference/interlocutor#update](https://docs.dialoganalytics.com/reference/interlocutor#update)
+
+```js
+dialog.updateInterlocutor(distinctId, params);
+```
+
 ## Documentation
 
 See the [API docs](https://docs.dialoganalytics.com).
