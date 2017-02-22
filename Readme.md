@@ -179,6 +179,30 @@ dialog.link('http://example.com', interlocutorDistinctId)
 // https://api.dialoganalytics.com/v1/b/7928374/clicks/?id=123456&url=http%3A%2F%2Fexample.com
 ```
 
+### Attach
+
+Modify the current `track` payload about to be sent to Dialog's API with this helper method.
+
+For example, you can specify a message name:
+
+```js
+dialog.attach('welcome')
+dialog.attach({ message: { name: 'welcome' }}) // equivalent
+```
+
+This will modify the `track` payload:
+
+```js
+{
+  message: {
+    name: "welcome",
+    ...
+  },
+  conversation: { ... },
+  creator: { ... }
+}
+```
+
 ### Messages
 
 #### Retrieve a message
