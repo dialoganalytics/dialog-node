@@ -172,7 +172,7 @@ dialog.event('subscribed', 'interlocutorDistinctId', { custom: 'value' })
 
 ### Clicks
 
-Track links clicked by interlocutors inside a conversation. Pass the interlocutor's distinct Id (provided by the platform or provider) and the `url`. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
+Record clicks by interlocutors inside a conversation using a trackable link. For every links that needs to be tracked, generate a trackable URL by passing the interlocutor's distinct Id (provided by the platform or provider) and the `url` to the `link` method. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
 
 ```js
 dialog.link('http://example.com', interlocutorDistinctId)
