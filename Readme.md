@@ -170,7 +170,7 @@ Send events to Dialog to keep track of your custom logic. Optionally pass an Int
 dialog.event('subscribed', 'interlocutorDistinctId', { custom: 'value' })
 ```
 
-### Tracking clicks
+### Clicks
 
 Track links clicked by interlocutors inside a conversation. Pass the interlocutor's distinct Id (provided by the platform or provider) and the `url`. See [docs.dialoganalytics.com/reference/click-tracking](https://docs.dialoganalytics.com/reference/click-tracking/)
 
