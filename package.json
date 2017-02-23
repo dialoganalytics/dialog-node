@@ -21,7 +21,7 @@
     "chatbot",
     "conversation"
   ],
-  "author": "“Philippe Dionne <p@dialoganalytics.com”>",
+  "author": "Philippe Dionne <p@dialoganalytics.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/phildionne/dialog-node/issues"
