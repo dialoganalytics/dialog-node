@@ -49,13 +49,13 @@ var payload = {
     nlp: {
       intents: [
         {
-          name: 'order.create',
+          name: 'rocket.launch',
           confidence: 0.98
         }
       ]
     },
     properties: {
-      text: "Hello world"
+      "text": "Launch some space rockets"
     }
   },
   conversation: {
